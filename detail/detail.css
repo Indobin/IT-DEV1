@@ -1,0 +1,13 @@
+/* ini contoh bahwa style css terakhir akan di prioritaskan
+jadi style di index.css akan di timpa oleh detail.css */
+
+#home_article figure {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#home_article figure img {
+    width: fit-content;
+    height: 100%;
+}
