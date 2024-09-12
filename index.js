@@ -15,7 +15,7 @@ function getProductFromDummyJson() {
             // Looping produk yang sudah dibatasi
             limitedProducts.forEach(product => {
                 product.description = shortText(product.description, 70); // Batasi panjang deskripsi
-                product.title = shortText(product.title, 20); // Batasi panjang judul
+                product.title = shortText(product.title, 15); // Batasi panjang judul
                 container.insertAdjacentHTML('beforeend',
                     `<div class="card">
                         <div class="card-img">
@@ -42,3 +42,14 @@ function getProductFromDummyJson() {
 function shortText(text, maxLength) {
     return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+   const navLink = document.querySelector('#navbar a')
+   const Url = window.location.href;
+   navLink.forEach(link =>{
+        if (link.href === Url) {
+            // Tambahkan kelas 'link-active'
+            link.classList.add('link-active');
+        }
+   });
+});

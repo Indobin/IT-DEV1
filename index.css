@@ -1,21 +1,24 @@
 /* Body styling */
 body {
     font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
-
 /* Header styling */
 #nav_container {
-    background-color: brown;
+    background-color: rgb(189, 15, 15);
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Tambahkan agar logo dan navbar sejajar */
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+    max-width: 100%; /* Batasi lebar maksimal */
+    margin: 0 auto; /* Center header */
+    width: 100%;
 }
 
 #navbar {
@@ -78,6 +81,7 @@ body {
 
 .bg-blue {
     background-color: blue;
+    
 }
 
 .p-2 {
@@ -105,6 +109,7 @@ body {
 #our_products {
     margin-top: 20px;
     padding: 20px;
+    
 }
 
 #product_container {
@@ -142,3 +147,4 @@ body {
     padding: 10px;
     background-color: white;
 }
+
