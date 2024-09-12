@@ -10,6 +10,7 @@
     kita dapat memanggilanya dengan cara berikut
     dua titik sebelum nama file menandakan perpindahan folder -->
     <link rel="stylesheet" href="../index.css">
+   
     <link rel="stylesheet" href="detail.css">
 
 
@@ -22,11 +23,16 @@
 <body>
     <header>
         <div id="nav_container">
-            <img src="../opl.png" alt="logo" width="50px"
+            <img src="https://th.bing.com/th/id/OIP.3F1NGX4mMcPkPZKgwdYjDQHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="logo" width="50px"
                 height="50px">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             <nav id="navbar">
                 <a href="../index.html">Home</a>
-                <a href="../index.html">Products</a>
+                <a href="../product.html" class="nav-link">Products</a>
             </nav>
         </div>
     </header>
@@ -34,12 +40,23 @@
         <article>
             <h1 id="title"></h1>
             <p id="description"></p>
+            <h1>Category</h1>
+            <p id="kategori"></p>
+            <h1>Stock</h1>
+            <p id="stok"></p>
+            <h1>Price</h1>
+            <p id="harga"></p>
         </article>
-        <figure>
-            <img src="" id="prod_img"
+        <div class="card">
+            <div class="card-image">
+                <img src="" id="prod_img"
                 alt="product image">
-        </figure>
+            </div>
+        </div>
+           
+      
     </section>
     <script src="detail.js"></script>
+    <script src="../active.js"></script>
 </body>
 </html>

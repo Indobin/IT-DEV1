@@ -15,11 +15,16 @@
 <body>
     <header>
         <div id="nav_container">
-            <img src="opl.png" alt="logo" width="50px"
-                height="50px">
+            <img src="https://th.bing.com/th/id/OIP.3F1NGX4mMcPkPZKgwdYjDQHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="logo" width="50px" height="50px">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
             <nav id="navbar">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="#our_products" class="nav-link">Products</a>
+                <a href="product.html" id="Product-link" class="nav-link">Products</a>
             </nav>
         </div>
     </header>
@@ -30,36 +35,45 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
                 nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
             </p>
-            <button class="bg-red p-2 text-white fw-bold border-radius shadow">Pelajari Lebih Lanjut!</button>
+            <a href="#about_article">
+                <button class="bg-blue p-2 text-white fw-bold border-radius shadow">About</button>
+            </a>
         </article>
         <figure>
             <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/product-label-design.jpg?v=1680902906"
                 alt="home image">
         </figure>
     </section>
-    <section id="our_products">
-        <center>
-            <h1>Our Products</h1>
-        </center>
-        <div id="product_container">
-            <!-- <div class="card">
-                <div class="card-img">
-                    <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/product-label-design.jpg?v=1680902906"
-                        alt="img product">
-                </div>
-                <section>
-                    <header>
-                        <p class="fw-bold">Bubuk Kopi</p>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, magnam temporibus ipsam fugit,
-                        tempore
-                        libero eos. Ratione!</p>
-                    <button class="bg-blue p-2 text-white fw-bold border-radius shadow">detail</button>
-                </section>
-            </div> -->
-        </div>
+    <section id="about_article">
+        <article>
+            <h1>About</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
+                nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et distinctio commodi animi? Nemo
+                necessitatibus perferendis inventore aperiam culpa illum possimus, odit officia expedita provident
+                consequatur reiciendis, rerum suscipit debitis maiores.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis pariatur debitis et, libero nostrum asperiores nam nesciunt mollitia, 
+                quae consectetur accusamus dolorem fuga dolor dolores sequi cupiditate officiis quos at?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere consequatur enim cum sapiente laboriosam iste! Quidem, 
+                repellendus sint excepturi cupiditate accusamus voluptatibus, animi odio adipisci nihil, cum consequuntur assumenda.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero quas quia minus, sint corporis possimus exercitationem aperiam ratione fugit qui repudiandae doloribus excepturi inventore. Inventore atque deleniti nesciunt cum?
+            </p>
+
+        </article>
+
     </section>
-    <script src="index.js"></script>
+    <!-- <script>
+    document.getElementById("Product-link").addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah perilaku default (loncat langsung)
+        
+        // Scroll halus ke elemen dengan ID 'product'
+        document.querySelector('#our_products').scrollIntoView({
+            behavior: 'smooth' // Efek scroll yang halus
+        });
+    });
+</script> -->
+    <script src="active.js"></script>
 </body>
 
 </html>

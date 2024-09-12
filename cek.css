@@ -1,0 +1,89 @@
+/* Base styles for the header */
+#nav_container {
+ background-color: rgb(189, 15, 15);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ width: 100%;
+}
+
+/* Styling for the hamburger menu (hidden by default) */
+.hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+}
+
+.hamburger span {
+ width: 25px;
+ height: 3px;
+ background-color: white;
+ margin: 4px 0;
+ transition: 0.4s;
+}
+
+/* Navbar styling */
+#navbar {
+ display: flex;
+ gap: 20px;
+}
+
+#navbar a {
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
+ padding: 10px 15px;
+ border-radius: 5px;
+ transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navbar a:hover {
+ background-color: white;
+ color: brown;
+}
+
+/* Responsive Design: Mobile view */
+@media (max-width: 768px) {
+ .hamburger {
+     display: flex;
+ }
+
+ #navbar {
+     display: none; /* Hide navbar in mobile view */
+     flex-direction: column;
+     position: absolute;
+     top: 60px;
+     right: 0;
+     background-color: rgb(189, 15, 15);
+     width: 100%;
+     padding: 10px 0;
+     text-align: center;
+ }
+
+ #navbar.show {
+     display: flex; /* Show navbar when hamburger is clicked */
+ }
+
+ #navbar a {
+     padding: 15px 0;
+     width: 100%;
+ }
+}
+
+/* Hamburger menu animation when active */
+.hamburger.active span:nth-child(1) {
+ transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+ opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+ transform: rotate(45deg) translate(-5px, -5px);
+}

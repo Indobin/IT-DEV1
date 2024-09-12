@@ -25,7 +25,9 @@ function renderProduct(id){
             document.getElementById('title').innerHTML = result.title;
             document.getElementById('description').innerHTML = result.description;
             document.getElementById('prod_img').src = result.thumbnail;
-
+            document.getElementById('kategori').innerHTML = result.category;
+            document.getElementById('stok').innerHTML = result.stock;
+            document.getElementById('harga').innerHTML = result.price;
             // perbedaan innerHTML dan insertAdjacentHTML terletak pada
             // fungsinya.
             // - innerHTML akan mengubah seluruh elemen yang terkandung
@@ -37,4 +39,6 @@ function renderProduct(id){
     };
     xhr.send();
 }
+
+  
 

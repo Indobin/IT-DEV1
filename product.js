@@ -10,11 +10,11 @@ function getProductFromDummyJson() {
             var container = document.querySelector('#product_container');
             container.innerHTML = ''; // Kosongkan container sebelum menambahkan produk baru
             // Batasi jumlah produk yang diambil hanya 10
-            const limitedProducts = data.products.slice(0, 10);
+            const dataProducts = data.products;
 
             // Looping produk yang sudah dibatasi
-            limitedProducts.forEach(product => {
-                product.description = shortText(product.description, 70); // Batasi panjang deskripsi
+            dataProducts.forEach(product => {
+                product.description = shortText(product.description, 50); // Batasi panjang deskripsi
                 product.title = shortText(product.title, 15); // Batasi panjang judul
                 container.insertAdjacentHTML('beforeend',
                     `<div class="card">
@@ -52,4 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.add('link-active');
         }
    });
+});
+document.getElementById("product-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Mencegah perilaku default (loncat langsung)
+    
+    // Scroll halus ke elemen dengan ID 'product'
+    document.querySelector('#product').scrollIntoView({
+        behavior: 'smooth' // Efek scroll yang halus
+    });
 });
