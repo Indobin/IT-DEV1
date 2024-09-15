@@ -1,7 +1,11 @@
 <section id="our_products">
-        <center>
-            <h1>Our Products</h1>
-        </center>
+        <!-- <center> -->
+            <h1 class="mb-4 font-semibold">Our Products</h1>
+            <a href="<?= BASEURL; ?>/product/add">
+                    <button class="bg-green-500 px-4 p-2 mb-12 text-white font-semibold 
+                    hover:bg-green-600 rounded-lg">Add Products</button>
+                </a>
+        <!-- </center> -->
         <div id="product_container">
         <div class="card">
             <?php 
