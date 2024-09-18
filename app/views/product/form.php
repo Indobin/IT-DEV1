@@ -1,5 +1,6 @@
-<section class="container mx-auto py-12">
-    <h1 class="text-2xl font-semibold mb-6 text-left mt-8"><?= $data['form'] ?></h1>
+<section class="pt-20 pb-12 bg-gray-100 w-full">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-semibold mb-6 text-left mt-4"><?= $data['form'] ?></h1>
 
     <form action="<?= BASEURL; ?>/Products/save" method="post" enctype="multipart/form-data">
         <!-- Hidden field for product ID (if editing) -->
@@ -74,4 +75,5 @@
             </button>
         </div>
     </form>
+    </div>
 </section>

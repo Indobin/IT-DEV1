@@ -1,28 +1,39 @@
-<section id="home_article" class="flex flex-col lg:flex-row items-center justify-between p-8 bg-gray-50 mt-16">
-    <!-- Article Section -->
-    <article class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
-        <h1 class="text-3xl font-bold mb-4">Selamat datang di Website kami, Belanja murah harga pas!</h1>
-        <p class="text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
-            nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
-        </p>
-        <a href="#about_article">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow transition duration-300">
-                About
-            </button>
-        </a>
-    </article>
-    <!-- Figure Section -->
-    <figure class="lg:w-1/2">
-        <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/product-label-design.jpg?v=1680902906"
-            alt="home image" class="w-full h-auto rounded-lg shadow-lg">
-    </figure>
-</section>
-
-<section id="about_article" class="py-12 px-8 bg-gray-100">
-    <article class="max-w-2xl mx-auto">
+<section class="pt-20 pb-12 bg-gray-100 w-full mt-4">
+    <div class="container mx-auto px-4">
+        <article class="text-center">
+            <h1 class="text-3xl font-bold mb-4">Selamat datang di Website kami, Belanja murah harga pas!</h1>
+        </article>
+        
+        <!-- Content Section with two <p> and an image in between -->
+        <div class="flex flex-col items-center lg:flex-row lg:space-x-8 mt-8">
+            <div class="lg:w-1/2">
+                <p class="text-gray-700 mb-6 text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
+                    nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
+                </p>
+            </div>
+            <!-- Image Centered -->
+           
+            <div class="lg:w-1/2">
+                <p class="text-gray-700 mb-6 text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
+                    nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
+                </p>
+            </div>
+            
+        </div>
+        <div>
+                <figure class="mx-auto">
+                    <img src="https://th.bing.com/th/id/OIP.TwdXpe1pVx7v9DNcCo4_UwHaIR?w=170&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                        alt="home image" class="w-1/2 h-1/2 rounded-lg shadow-lg mx-auto">
+                </figure>
+            </div>
+    </div>
+    
+    <!-- About Article Section -->
+    <article class="max-w-2xl mx-auto text-center mt-8">
         <h1 class="text-3xl font-bold mb-4">About</h1>
-        <p class="text-gray-700">
+        <p class="text-gray-700 text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos placeat officia illo veniam omnis eos
             nobis fuga ipsam? Perferendis rem tempora voluptate eos eaque quam alias velit, consequuntur sit?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et distinctio commodi animi? Nemo

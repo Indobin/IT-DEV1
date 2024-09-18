@@ -31,7 +31,15 @@ class ProductsController extends Controller{
     $this->view('product/form', $data);
     $this->view('template/footer');
 }
-
+public function details($id){
+    $data = [
+        'judul' => 'Details Product',
+        'prd' => $this->model('Products_Model')->getProductById($id),
+        ];
+        $this->view('template/header', $data);
+        $this->view('product/details', $data);
+        $this->view('template/footer');
+}
 public function save() {
     $id = $_POST['id'] ?? null;
     $img = $_FILES['img'];
