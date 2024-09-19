@@ -23,10 +23,10 @@
             <select id="category" name="category"
                     class="mt-1 p-2 w-1/2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
                 <option value="">Pilih Kategori</option>
-                <option value="elektronik" <?= (isset($data['product']['category']) && $data['product']['category'] === 'elektronik') ? 'selected' : ''; ?>>Elektronik</option>
-                <option value="pakaian" <?= (isset($data['product']['category']) && $data['product']['category'] === 'pakaian') ? 'selected' : ''; ?>>Pakaian</option>
-                <option value="peralatan" <?= (isset($data['product']['category']) && $data['product']['category'] === 'peralatan') ? 'selected' : ''; ?>>Peralatan</option>
-                <option value="makanan" <?= (isset($data['product']['category']) && $data['product']['category'] === 'makanan') ? 'selected' : ''; ?>>Makanan</option>
+                <option value="Electronics" <?= (isset($data['product']['category']) && $data['product']['category'] === 'Electronics') ? 'selected' : ''; ?>>Electronics</option>
+                <option value="Clothing" <?= (isset($data['product']['category']) && $data['product']['category'] === 'Clothing') ? 'selected' : ''; ?>>Clothing</option>
+                <option value="Appliances" <?= (isset($data['product']['category']) && $data['product']['category'] === 'Appliances') ? 'selected' : ''; ?>>Appliances</option>
+                <option value="Groceries" <?= (isset($data['product']['category']) && $data['product']['category'] === 'Groceries') ? 'selected' : ''; ?>>Groceries</option>
             </select>
         </div>
 

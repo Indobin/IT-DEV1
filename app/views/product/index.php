@@ -5,7 +5,7 @@
         <div class="flex justify-start mb-6">
             <a href="<?= BASEURL; ?>/Products/form">
                 <button class="bg-green-500 px-6 py-2 text-white font-semibold hover:bg-green-600 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Add Products
+                    Add Product
                 </button>
             </a>
         </div>
@@ -64,4 +64,14 @@
         object-fit: cover;
     }
     </style>
+    <script>
+        Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your work has been saved",
+  showConfirmButton: false,
+  timer: 1500
+});
+
+    </script>
 </section>

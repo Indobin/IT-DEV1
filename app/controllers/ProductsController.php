@@ -19,21 +19,18 @@ class ProductsController extends Controller{
         'form' => $id ? 'Edit Product' : 'Add Product',
         'method' => $id ? 'PUT' : 'POST',
     ];
-
     if ($id) {
-        // Ambil data produk untuk diedit
-        var_dump($id);
+        // var_dump($id);
         $data['product'] = $this->model('Products_Model')->getProductById($id);
         
     }
-
     $this->view('template/header', $data);
     $this->view('product/form', $data);
     $this->view('template/footer');
 }
 public function details($id){
     $data = [
-        'judul' => 'Details Product',
+        'judul' => 'Detail Product',
         'prd' => $this->model('Products_Model')->getProductById($id),
         ];
         $this->view('template/header', $data);
@@ -52,8 +49,8 @@ public function save() {
     if ($error === 4) {
         $namaFileBaru = $_POST['existing_img'] ?? null; // Gunakan gambar lama jika tidak ada gambar baru
     } else {
-        if ($size > 2000) {
-            Messege::setFlash('Upload Gagal', 'Ukuran gambar', 'terlalu besar', 'danger');
+        if ($size > 2000000) {
+            Messege::setFlash('Upload failed', 'Image size', 'too large', 'error');
             header('Location:' . BASEURL . '/products/form');
             exit;
         }
@@ -63,7 +60,7 @@ public function save() {
         $extensiFile = strtolower(end($extensiFile));
 
         if (!in_array($extensiFile, $extensiFileValid)) {
-            Messege::setFlash('Upload Gagal', 'Ekstensi file tidak valid', 'danger');
+            Messege::setFlash('Upload Failed', 'File extension', 'invalid', 'error');
             header('Location:' . BASEURL . '/products');
             exit;
         }
@@ -83,16 +80,16 @@ public function save() {
     if ($id) {
         // Update produk
         if ($this->model('Products_Model')->updateProduct($id, $_POST, $namaFileBaru) > 0) {
-            Messege::setFlash('Data Produk', 'berhasil', 'diperbarui', 'success');
+            Messege::setFlash('Product Data', 'successful', 'updated', 'success');
         } else {
-            Messege::setFlash('Data Produk', 'gagal', 'diperbarui', 'danger');
+            Messege::setFlash('Product Data', 'failed', 'updated', 'error');
         }
     } else {
         // Tambah produk
         if ($this->model('Products_Model')->tambahProducts($_POST, $namaFileBaru) > 0) {
-            Messege::setFlash('Data Produk', 'berhasil', 'ditambahkan', 'success');
+            Messege::setFlash('Product Data', 'successful', 'added', 'success');
         } else {
-            Messege::setFlash('Data Produk', 'gagal', 'ditambahkan', 'danger');
+            Messege::setFlash('Product Data', 'failed', 'added', 'error');
         }
     }
 
@@ -102,13 +99,13 @@ public function save() {
 public function delete($id){
     
     if ($this->model('Products_Model')->deleteProducts($id)>0) {
-        Messege::setFlash('Data Produk','berhasil', 'dihapus' , 'success');
+        Messege::setFlash('Product Data', 'successful', 'deleted', 'success');
         header('Location:' . BASEURL . '/products');
 
         // var_dump($_SESSION);
         exit;
     }else {
-        Messege::setFlash('Data Produk','gagal', 'ditambah', 'danger');
+        Messege::setFlash('Product Data', 'failed', 'deleted', 'error');
         header('Location:' . BASEURL . '/products');
         exit;
     }

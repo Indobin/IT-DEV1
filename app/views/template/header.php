@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-        <script src="<?= BASEURL; ?>/js/sweetalert2.all.min.js"></script>
 
 
 </head>
@@ -28,7 +27,7 @@ if (Messege::flashExists()) :
          data-title="<?= Messege::getFlash('title'); ?>" 
          data-message="<?= Messege::getFlash('message'); ?>"></div>
 <?php
-    Messege::clearFlash();  // Hapus flash setelah dibaca
+    Messege::clearFlash();
 endif;
 ?>
 <header id="navbarHeader" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-gray-800">
@@ -42,49 +41,13 @@ endif;
             <span class="block w-6 h-0.5 bg-gray-300"></span>
         </div>
 
-        <nav id="navbar" class="space-x-8 container mx-[65px] ">
+        <!-- Navbar, initially hidden on mobile -->
+        <nav id="navbar" class="hidden lg:flex space-x-8 container mx-[65px] transition-all duration-300 ease-in-out transform">
             <a href="<?= BASEURL; ?>/Home" class="nav-link text-gray-300 hover:text-gray-100 transition-colors duration-300 text-lg">Home</a>
             <a href="<?= BASEURL; ?>/Products" id="Product-link" class="nav-link text-gray-300 hover:text-gray-100 transition-colors duration-300 text-lg">Products</a>
         </nav>
     </div>
 </header>
 
-<script>
-    // Mengubah opasitas header saat scroll
-    window.addEventListener('scroll', function() {
-        var header = document.getElementById('navbarHeader');
-        if (window.scrollY > 50) {
-            // Saat scroll ke bawah, tambahkan opasitas penuh dan shadow
-            header.classList.remove('bg-opacity-90');
-            header.classList.add('bg-opacity-95', 'shadow-lg');
-        } else {
-            // Saat scroll ke atas (posisi awal), kembalikan opasitas menjadi transparan, tapi background color tetap
-            header.classList.remove('bg-opacity-90', 'shadow-lg');
-            header.classList.add('bg-gray-800'); // Tetap menggunakan bg-gray-800 dengan opasitas 90%
-        }
-    });
-</script>
 
 
-<!-- Script untuk Hamburger Menu dan Transparent Navbar saat Scroll -->
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navbarHeader = document.getElementById('navbarHeader');
-
-    // Toggle mobile menu saat hamburger di-click
-    hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
-
-
-<!-- Script untuk Hamburger Menu -->
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>

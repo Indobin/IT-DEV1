@@ -1,6 +1,4 @@
-// alert.js
-// alert.js
-console.log("alert.js loaded");
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const flashData = document.getElementById('flash-data');
@@ -11,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: flashData.dataset.type,
             title: flashData.dataset.title,
             text: flashData.dataset.message,
-            showConfirmButton: true
+            showConfirmButton: false,
+            timer: 1600,
         });
     } else {
         console.log("No flash data found");
@@ -24,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function untuk konfirmasi penghapusan produk
 function confirmDelete(id, deleteUrl) {
     Swal.fire({
-        title: 'Apakah Anda yakin?',
-        text: "Data produk akan dihapus!",
+        title: 'Are you sure?',
+        text: "Product data will be deleted!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Ya, hapus!',
-        cancelButtonText: 'Batal',
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'Cancel',
         width: '400px',  // Ukuran alert
         height: '250px',  // Padding
     }).then((result) => {
