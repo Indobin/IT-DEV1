@@ -16,6 +16,6 @@ const hamburger = document.getElementById('hamburger');
         } else {
             // Saat scroll ke atas (posisi awal), kembalikan opasitas menjadi transparan, tapi background color tetap
             header.classList.remove('bg-opacity-90', 'shadow-lg');
-            header.classList.add('bg-gray-800'); // Tetap menggunakan bg-gray-800 dengan opasitas 90%
+            header.classList.add('bg-blue-700'); // Tetap menggunakan bg-gray-800 dengan opasitas 90%
         }
     });

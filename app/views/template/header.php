@@ -30,10 +30,10 @@ if (Messege::flashExists()) :
     Messege::clearFlash();
 endif;
 ?>
-<header id="navbarHeader" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-gray-800">
+<header id="navbarHeader" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-blue-700">
     <div id="nav_container" class="flex items-center justify-start p-4 w-full">
         <!-- Logo -->
-        <img src="https://th.bing.com/th/id/OIP.3F1NGX4mMcPkPZKgwdYjDQHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="logo" width="50px" height="50px">
+        <img src="https://pluspng.com/img-png/png-toko-toko-pasar-png-512.png" alt="logo" width="50px" height="50px">
 
         <div class="hamburger block lg:hidden cursor-pointer ml-4" id="hamburger">
             <span class="block w-6 h-0.5 bg-gray-300 mb-1"></span>
